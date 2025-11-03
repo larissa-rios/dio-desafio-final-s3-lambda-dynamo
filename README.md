@@ -8,7 +8,7 @@ Este foi, sem dúvida, o desafio mais complexo e o que mais me ensinou. Ele cone
 
 A minha maior dificuldade foi entender como **dar as permissões corretas**. A Função Lambda não podia falar com o DynamoDB até que eu criei uma **IAM Role** (`Role-DesafioFinal-Lambda`) e anexei as permissões corretas (`AmazonS3ReadOnlyAccess` e `AmazonDynamoDBFullAccess`). Foi o "clique" que fez tudo funcionar!
 
-## 🚀 O Workflow Automatizado que eu Criei
+## 🚀 O Workflow Automatizado que eu Criei (Na AWS Real)
 
 Eu construí um fluxo de trabalho orientado a eventos (event-driven) 100% na AWS:
 
@@ -25,8 +25,12 @@ Eu construí um fluxo de trabalho orientado a eventos (event-driven) 100% na AWS
 
 Ao fazer o upload de um arquivo de teste no S3, o registro apareceu quase instantaneamente na minha tabela DynamoDB. Isso provou que a automação serverless funcionou perfeitamente!
 
-## 📸 Provas (Screenshots)
+## 🖊️ Nota sobre a Metodologia (LocalStack vs. AWS Real)
 
+Eu notei que o material de aula sugeria o uso do **LocalStack** (o simulador da AWS).
+No entanto, para este desafio, eu optei por executar o fluxo **diretamente no ambiente real da AWS**. O motivo foi a eficiência: como eu tinha créditos promocionais da bolsa ($120), pude usar a nuvem real de forma rápida e segura, sem o tempo extra de configuração do simulador.
+
+## 📸 Provas (Screenshots)
 Abaixo estão os prints do processo:
 ![Criação da Tabela DynamoDB](print1.png)
 
